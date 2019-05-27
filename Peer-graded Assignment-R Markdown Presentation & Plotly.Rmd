@@ -1,0 +1,54 @@
+---
+title: "Peer-graded Assignment: Course Project: Shiny Application and Reproducible Pitch"
+author: "Subramanyan K P"
+date: "27/05/2019"
+output: 
+  ioslides_presentation: 
+    smaller: yes
+runtime: shiny
+---
+
+## Overview
+
+This application was designed for Developing Data Products as part of the Coursera Data Science Speicalization Course.
+In 1974, Motor Trend US Magazine collected data (11 variable) on 32 automobiles. The Data for prediction was extracted from here . Using the application above and using the data provided in mtcars, the cost of gasoline incurred traveling some distance driving one of the 32 vehicles reported in 1974, using the national average gasoline price (as of 25th of February, 2018) of $2.523/gal can be calculated (other prices can be input as well). The variables studied in 1974 has been stated ,how the data output would look in R will be shown, and a matrix plot of variables that are used in the app is shown in the presentation.
+
+The first part of the assignment to create a Shiny application can be found here: https://subramanyankp.shinyapps.io/Subbu-Cars01/
+
+The second part of the assigment to prepare a reproducible pitch presentation about the application can be found here: 
+
+https://github.com/SubramanyanKP/Peer-graded-Assignment-Course-Project-Shiny-Application-and-Reproducible-Pitchitch
+
+
+
+## Data and Variables Given :
+
+- [, 1]	mpg - 	Miles/(US) gallon.
+- [, 2]	cyl - Number of cylinders.
+- [, 3]	disp - 	Displacement (cu.in.).
+- [, 4]	hp - 	Gross horsepower.
+- [, 5]	drat - 	Rear axle ratio.
+- [, 6]	wt - 	Weight (1000 lbs)
+- [, 7]	qsec - 	quarter (1/4) mile time.
+- [, 8]	vs - 	V/S.
+- [, 9]	am - 	Transmission (0 = automatic, 1 = manual).
+- [,10]	gear - 	Number of forward gears.
+- [,11]	carb - 	Number of carburetors.
+
+## Data output in R:
+
+We can use head(mtcars) to view the first 6 lines of the data in R.
+
+```{r cars, echo = TRUE}
+head(mtcars)
+```
+
+## Plotting data:
+
+The matrix plot below focuses on only Miles/gallon (mpg), Number of cylinders (cyl), Weight in 1000lbs (wt), and type of transmission (am) among the 11 variables available in the data .
+
+Now, to produce the table we need to use: pairs(~mpg+cyl+wt+am, data=mtcars).
+
+```{r plot cars}
+pairs(~mpg+cyl+wt+am, data=mtcars, main= "Selected Data from mtcars")
+```
